@@ -1,0 +1,184 @@
+{
+  "plats": [
+    {
+      "nom": "Ayimolou fumant",
+      "description": "Poisson braisé, sauce tomate épicée, banane plantain, oeuf...",
+      "prix": 1500,
+      "categorie": "plat",
+      "image": "image11.jpg",
+      "signature": true
+    },
+
+    {
+      "nom": "Riz au gras",
+      "description": "Riz, viande de boeuf, poisson braisé",
+      "prix": 1500,
+      "categorie": "plat",
+      "image": "image23.jpg",
+      "signature": true
+    },
+    {
+      "nom": "Khom (Boule de pâte de maïs)",
+      "description": "Sauce tomate épicée, Poisson braisé, Sardine",
+      "prix": 1000,
+      "categorie": "plat",
+      "image": "image2.jpg",
+      "signature": true
+    },
+    {
+      "nom": "Pinon",
+      "description": "Viande de porc, sauce tomate épicée mélangée avec du gari",
+      "prix": 1000,
+      "categorie": "plat",
+      "image": "image3.jpg",
+      "signature": true
+    },
+    {
+      "nom": "Attieké",
+      "description": "Poisson braisé, Alloco,jus de tomate",
+      "prix": 1500,
+      "categorie": "plat",
+      "image": "image4.jpg",
+      "signature": true
+    },
+    {
+      "nom": "Foufou",
+      "description": "Viande de boeuf,Poisson, sauce blanche, d'arachide et sauce aux grains de palme ",
+      "prix": 2500,
+      "categorie": "plat",
+      "image": "image6.jpg",
+      "signature": true
+    },
+    {
+      "nom": "Frites ",
+      "description": "Pomme de terre frite,poulet braisé",
+      "prix": 3000,
+      "categorie": "Fast-food",
+      "image": "image9.jpg",
+      "signature": true
+    },
+
+    {
+      "nom": "Koliko",
+      "description": "igname frite,poisson,viande",
+      "prix": 1000,
+      "categorie": "plat",
+      "image": "image20.jpg",
+      "signature": true
+    },
+
+    {
+      "nom": "Akumè",
+      "description": "Sauce d'adémè, gombo, gboma",
+      "prix": 1500,
+      "categorie": "plat",
+      "image": "image5.jpg",
+      "signature": true
+    },
+
+    {
+      "nom": "Burger",
+      "description": "Pain maison, viande de boeuf, fromage, salade, tomate, sauce maison",
+      "prix": 3000,
+      "categorie": "Fast-food",
+      "image": "image8.jpg",
+      "signature": true
+    }, 
+
+    {
+      "nom": "Salade de légumes",
+      "description": "Laitue, tomate, concombre, carotte, vinaigrette maison",
+      "prix": 1000,
+      "categorie": "entrée",
+      "image": "image10.jpg",
+      "signature": true
+    },
+
+    {
+      "nom": "Pizza",
+      "description": "Pâte à pizza, sauce tomate, mozzarella, pepperoni, champignons, poivrons",
+      "prix": 3500,
+      "categorie": "Fast-food",
+      "image": "image7.jpg",
+      "signature": true
+    },
+    {
+      "nom": "Shawarma",
+      "description": "Pain à shawarma, viande de bœuf, fromage, salade, tomate, sauce maison",
+      "prix": 1000,
+      "categorie": "Fast-food",
+      "image": "image22.jpg",
+      "signature": true
+    },
+
+    {
+      "nom": "Spaghetti",
+      "description": "Pâtes, sauce tomate, viande hachée, parmesan",
+      "prix": 1200,
+      "categorie": "plat",
+      "image": "image12.jpg",
+      "signature": true
+    },
+
+    {
+      "nom": "Amuse-gueules",
+      "description": "Petite bouchée de bienvenue, selon l'inspiration du chef",
+      "prix": 500,
+      "categorie": "entrée",
+      "image": "image14.jpg",
+      "signature": true
+    },
+    {
+      "nom": "Cookies",
+      "description": "Pâtisserie locale",
+      "prix": 500,
+      "categorie": "dessert",
+      "image": "image15.jpg",
+      "signature": true
+    },
+    
+    {
+      "nom": "Cake au chocolat",
+      "description": "",
+      "prix": 500,
+      "categorie": "dessert",
+      "image": "image19.jpg",
+      "signature": true
+    },
+
+    {
+      "nom": "Eau minérale",
+      "description": "Eau minérale plate ou gazeuse",
+      "prix": 200,
+      "categorie": "boisson",
+      "image": "image21.jpg",
+      "signature": true
+    },
+    {
+      "nom": "Boisson sucrée",
+      "description": "Boisson locale",
+      "prix": 1000,
+      "categorie": "boisson",
+      "image": "image17.jpg",
+      "signature": true
+    },
+
+    {
+      "nom": "Jus de fruits frais",
+      "description": "Jus de mangue, jus d'ananas, jus de cocktail ,jus d'orange",
+      "prix": 500,
+      "categorie": "boisson",
+      "image": "image16.jpg",
+      "signature": true
+    },
+
+    {
+      "nom": "Liqueur",
+      "description": "Vin, Rhum, Whisky, Vodka",
+      "prix": 2500,
+      "categorie": "boisson",
+      "image": "image18.jpg",
+      "signature": true
+    }
+  ]
+}

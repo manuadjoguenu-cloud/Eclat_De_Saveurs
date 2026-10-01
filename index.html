@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>L'Éclat de Saveurs</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html"><img src="images/logo.jpg" alt="L'Éclat de Saveurs" class="logo"></a>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu">☰</button>
+    <ul id="liens">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="#carte">La carte</a></li>
+      <li><a href="#commande">Commander</a></li>
+      <li><a href="#reservation">Réservation</a></li>
+      <li><a href="#histoire">Notre histoire</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#reservation" class="btn">Réserver</a>
+  </nav>
+
+  <section class="hero">
+    <div>
+      <h1>Une cuisine africaine, revisitée avec éclat</h1>
+      <p>Produits de saison, dressages soignés et saveurs qui marquent.</p>
+      <a href="#carte" class="btn">Voir la carte</a>
+    </div>
+  </section>
+
+  <section id="carte">
+    <h2>Notre carte</h2>
+    <p class="sub">Plats signatures</p>
+    <div class="grid" id="grille">
+      <p class="message">Chargement de la carte…</p>
+    </div>
+  </section>
+
+  
+  <section id="commande" class="commande">
+    <h2>Commander</h2>
+    <p class="sub">Livraison ou sur place</p>
+    <div class="commande-corps">
+      <div id="liste-commande">
+        <p class="message">Chargement de la carte…</p>
+      </div>
+ 
+      <aside class="panier">
+        <h3>Votre commande</h3>
+        <ul id="panier-lignes"></ul>
+        <p class="total"><span>Total</span> <strong id="panier-total">0 FCFA</strong></p>
+ 
+        <form id="form-commande" novalidate>
+          <fieldset class="mode">
+            <legend class="sr-only">Mode de service</legend>
+            <label class="choix"><input type="radio" name="mode" value="livraison" checked> Livraison</label>
+            <label class="choix"><input type="radio" name="mode" value="sur-place"> Sur place</label>
+          </fieldset>
+          <div class="champ">
+            <label for="cmd-nom">Nom</label>
+            <input type="text" id="cmd-nom" name="nom" required>
+          </div>
+          <div class="champ">
+            <label for="cmd-tel">Téléphone</label>
+            <input type="tel" id="cmd-tel" name="tel" placeholder="+228 90 00 00 00" required>
+          </div>
+          <div class="champ" id="champ-adresse">
+            <label for="cmd-adresse">Adresse de livraison</label>
+            <input type="text" id="cmd-adresse" name="adresse" placeholder="Quartier, rue, point de repère">
+          </div>
+          <div class="champ">
+            <label for="cmd-heure">Heure souhaitée (facultatif)</label>
+            <input type="time" id="cmd-heure" name="heure">
+          </div>
+          <div class="champ">
+            <label for="cmd-note">Remarque (facultatif)</label>
+            <input type="text" id="cmd-note" name="note" placeholder="Sans piment, allergie…">
+          </div>
+          <p id="erreur-cmd" class="erreur" role="alert"></p>
+          <button type="submit" class="btn">Envoyer la commande</button>
+          <p id="succes-cmd" class="succes" role="status"></p>
+        </form>
+      </aside>
+    </div>
+  </section>
+
+
+  <section id="reservation" class="reservation">
+    <h2>Réserver une table</h2>
+    <p class="sub">Ouvert du mardi au dimanche</p>
+    <form id="form-resa" novalidate>
+      <div class="champ">
+        <label for="nom">Nom complet</label>
+        <input type="text" id="nom" name="nom" required>
+      </div>
+      <div class="champ">
+        <label for="tel">Téléphone</label>
+        <input type="tel" id="tel" name="tel" placeholder="+228 90 00 00 00" required>
+      </div>
+      <div class="champ">
+        <label for="date">Date</label>
+        <input type="date" id="date" name="date" required>
+      </div>
+      <div class="champ">
+        <label for="heure">Heure</label>
+        <select id="heure" name="heure" required>
+          <option value="">Choisir</option>
+          <optgroup label="Déjeuner">
+            <option>12:00</option><option>12:30</option><option>13:00</option><option>13:30</option><option>14:00</option>
+          </optgroup>
+          <optgroup label="Dîner">
+            <option>19:00</option><option>19:30</option><option>20:00</option><option>20:30</option><option>21:00</option><option>21:30</option>
+          </optgroup>
+        </select>
+      </div>
+      <div class="champ">
+        <label for="personnes">Nombre de personnes</label>
+        <select id="personnes" name="personnes" required>
+          <option value="1">1 personne</option>
+          <option value="2" selected>2 personnes</option>
+          <option value="3">3 personnes</option>
+          <option value="4">4 personnes</option>
+          <option value="5">5 personnes</option>
+          <option value="6">6 personnes</option>
+          <option value="7">7 personnes</option>
+          <option value="8">8 personnes</option>
+          <option value="plus">Plus de 8 personnes</option>
+        </select>
+      </div>
+
+      <div class="champ">
+        <label for="plat">Plat</label>
+        <select id="plat" name="plat" required>
+          <option value="">Chargement de la carte…</option>
+        </select>
+      </div>
+      <div class="champ">
+        <label for="note">Remarque (facultatif)</label>
+        <input type="text" id="note" name="note" placeholder="Anniversaire, allergie, chaise bébé…">
+      </div>
+      <p id="erreur-resa" class="erreur" role="alert"></p>
+      <button type="submit" class="btn">Envoyer la demande</button>
+      <p id="succes-resa" class="succes" role="status"></p>
+    </form>
+  </section>
+
+  
+  <section id="histoire" class="about">
+    <img src="images/plats/image13.jpg" alt="Un plat de L'Éclat de Saveurs">
+    <div>
+      <h2>L'Éclat de Saveurs</h2>
+<p>Né d'une envie simple : faire briller la cuisine que l'on mange à la maison, et la servir avec le soin d'une grande table.</p>
+<p>Chez nous, l'ayimolou fumant, l'akumè accompagné de sa sauce, l'attiéké et le fufu retrouvent la place qu'ils méritent. Ce sont des plats de partage, de famille et de fête, préparés comme on les prépare chez soi : lentement, avec des produits frais et beaucoup de générosité.</p>
+<p>Parce qu'on ne mange pas la même chose tous les jours, notre carte fait aussi la part belle aux envies d'ailleurs. Nos pizzas et nos burgers sont préparés maison, avec le même souci du détail que nos plats traditionnels.</p>
+<p>La salle est pensée comme une grande cour de maison : chaleureuse, conviviale, faite pour les déjeuners entre collègues comme pour les grandes tablées du dimanche.</p>
+<p>Notre promesse : vous servir comme on sert un invité de la famille.</p>
+      <a href="#reservation" class="btn">Réserver une table</a>
+    </div>
+  </section>
+
+   <footer id="contact">
+    <div class="footer-grille">
+      <div>
+        <p class="footer-nom">L'Éclat de Saveurs</p>
+        <p>Les saveurs d'Afrique, servies avec éclat.</p>
+      </div>
+ 
+      <div>
+        <h4>Nous trouver</h4>
+        <ul>
+          <li><a href="https://www.google.com/maps" target="_blank" rel="noopener">Togo, Lomé-Adidogome</a></li>
+          <li><a href="tel:+22892036639">+228 92 03 66 39</a></li>
+        </ul>
+        <a href="https://wa.me/22892036639" target="_blank" rel="noopener" class="footer-wa">Écrire sur WhatsApp</a>
+      </div>
+ 
+      <div>
+        <h4>Horaires</h4>
+        <ul>
+          <li>Mardi au dimanche</li>
+          <li>12h – 15h</li>
+          <li>19h – 21h30</li>
+          <li>Fermé le lundi</li>
+        </ul>
+      </div>
+ 
+      <div>
+        <h4>Liens rapides</h4>
+        <ul>
+          <li><a href="#carte">La carte</a></li>
+          <li><a href="#commande">Commander</a></li>
+          <li><a href="#reservation">Réservation</a></li>
+          <li><a href="#histoire">Notre histoire</a></li>
+        </ul>
+        <h4 class="titre-suivant">Suivez-nous</h4>
+        <ul>
+          <li><a href="https://www.facebook.com/#" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://www.instagram.com/#" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.tiktok.com/#" target="_blank" rel="noopener">TikTok</a></li>
+        </ul>
+      </div>
+    </div>
+ 
+    <div class="footer-bas">
+      <span>© <span id="annee">2026</span> L'Éclat de Saveurs · Paiement : espèces, Flooz, T-Money</span>
+      <a href="#">Haut de page ↑</a>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/reservation.js"></script>
+  <script src="js/commande.js"></script>
+</body>
+</html>
