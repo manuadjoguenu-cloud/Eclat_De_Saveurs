@@ -1,14 +1,13 @@
 {
   "plats": [
     {
-      "nom": "Ayimolou fumant",
+      "nom": "Ayimolou ",
       "description": "Poisson braisé, sauce tomate épicée, banane plantain, oeuf...",
       "prix": 1500,
       "categorie": "plat",
       "image": "image11.jpg",
       "signature": true
     },
-
     {
       "nom": "Riz au gras",
       "description": "Riz, viande de boeuf, poisson braisé",
@@ -57,7 +56,6 @@
       "image": "image9.jpg",
       "signature": true
     },
-
     {
       "nom": "Koliko",
       "description": "igname frite,poisson,viande",
@@ -66,7 +64,6 @@
       "image": "image20.jpg",
       "signature": true
     },
-
     {
       "nom": "Akumè",
       "description": "Sauce d'adémè, gombo, gboma",
@@ -75,7 +72,6 @@
       "image": "image5.jpg",
       "signature": true
     },
-
     {
       "nom": "Burger",
       "description": "Pain maison, viande de boeuf, fromage, salade, tomate, sauce maison",
@@ -83,8 +79,7 @@
       "categorie": "Fast-food",
       "image": "image8.jpg",
       "signature": true
-    }, 
-
+    },
     {
       "nom": "Salade de légumes",
       "description": "Laitue, tomate, concombre, carotte, vinaigrette maison",
@@ -93,7 +88,6 @@
       "image": "image10.jpg",
       "signature": true
     },
-
     {
       "nom": "Pizza",
       "description": "Pâte à pizza, sauce tomate, mozzarella, pepperoni, champignons, poivrons",
@@ -110,7 +104,6 @@
       "image": "image22.jpg",
       "signature": true
     },
-
     {
       "nom": "Spaghetti",
       "description": "Pâtes, sauce tomate, viande hachée, parmesan",
@@ -119,7 +112,6 @@
       "image": "image12.jpg",
       "signature": true
     },
-
     {
       "nom": "Amuse-gueules",
       "description": "Petite bouchée de bienvenue, selon l'inspiration du chef",
@@ -136,16 +128,14 @@
       "image": "image15.jpg",
       "signature": true
     },
-    
     {
       "nom": "Cake au chocolat",
-      "description": "",
+      "description": "Cake moelleux au chocolat, cœur fondant",
       "prix": 500,
       "categorie": "dessert",
       "image": "image19.jpg",
       "signature": true
     },
-
     {
       "nom": "Eau minérale",
       "description": "Eau minérale plate ou gazeuse",
@@ -162,7 +152,6 @@
       "image": "image17.jpg",
       "signature": true
     },
-
     {
       "nom": "Jus de fruits frais",
       "description": "Jus de mangue, jus d'ananas, jus de cocktail ,jus d'orange",
@@ -171,7 +160,6 @@
       "image": "image16.jpg",
       "signature": true
     },
-
     {
       "nom": "Liqueur",
       "description": "Vin, Rhum, Whisky, Vodka",
