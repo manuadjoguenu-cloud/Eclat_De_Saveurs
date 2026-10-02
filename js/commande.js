@@ -40,7 +40,7 @@
 
         const ligne = el("div", "ligne-plat");
         const img = el("img");
-        img.src = "images/plats/" + p.image;
+        img.src = p.image.startsWith("/") ? p.image : "images/plats/" + p.image;
         img.alt = p.nom;
         img.loading = "lazy";
 
@@ -62,7 +62,7 @@
     succesEl.textContent = ""; // efface l'ancien message de confirmation
     const q = (panier.get(i) || 0) + delta;
     if (q <= 0) panier.delete(i);
-    else panier.set(i, Math.min(q, 20));
+    else panier.set(i, Math.min(q, 100));
     afficherPanier();
   }
 
@@ -115,7 +115,7 @@
 
     let erreur = "";
     if (panier.size === 0) erreur = "Ajoute au moins un plat à ta commande.";
-    else if (d.nom.trim().length < 2) erreur = "Indique ton nom.";
+    else if (d.nom.trim().length < 4) erreur = "Indique ton nom.";
     else if (d.tel.replace(/\D/g, "").length < 8) erreur = "Indique un numéro de téléphone valide.";
     else if (livraison && d.adresse.trim().length < 5) erreur = "Indique l'adresse de livraison (quartier, point de repère).";
 
@@ -141,7 +141,7 @@
 
     window.open(`https://wa.me/${NUMERO_WHATSAPP}?text=${encodeURIComponent(message)}`, "_blank");
 
-    succesEl.textContent = "Ta commande est prête dans WhatsApp. Appuie sur Envoyer pour la confirmer.";
+    succesEl.textContent = "Votre commande est prête ! Appuyez sur le bouton « Envoyer » dans WhatsApp pour la valider.";
     panier.clear();
     form.reset();
     majAdresse();
@@ -162,6 +162,6 @@
     })
     .catch((err) => {
       console.error(err);
-      listeEl.textContent = "Impossible de charger la carte. Ouvre le site avec Live Server.";
+      listeEl.textContent = "La carte est momentanément indisponible. Contactez-nous sur WhatsApp pour commander.";
     });
 })();

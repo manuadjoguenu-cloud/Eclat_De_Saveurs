@@ -1,0 +1,33 @@
+# Configuration de l'administration (Decap CMS)
+
+backend:
+  name: github
+  repo: manuadjoguenu-cloud/Eclat_De_Saveurs   
+  branch: main
+
+locale: fr
+
+# Les photos envoyées depuis l'administration vont dans ce dossier
+media_folder: "images/plats"
+public_folder: "/images/plats"
+
+collections:
+  - name: carte
+    label: Carte du restaurant
+    files:
+      - name: menu
+        label: Plats et boissons
+        file: data/menu.json
+        fields:
+          - label: Plats
+            name: plats
+            widget: list
+            label_singular: un plat
+            summary: "{{fields.nom}} · {{fields.prix}} FCFA"
+            fields:
+              - { label: Nom, name: nom, widget: string }
+              - { label: Description, name: description, widget: string }
+              - { label: Prix (FCFA), name: prix, widget: number, value_type: int, min: 0 }
+              - { label: Catégorie, name: categorie, widget: select, options: ["entrée", "plat", "dessert", "boisson"] }
+              - { label: Photo, name: image, widget: image }
+              - { label: Afficher sur l'accueil, name: signature, widget: boolean, default: false }

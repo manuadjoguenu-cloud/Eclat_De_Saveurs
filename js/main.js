@@ -15,7 +15,7 @@ function creerCarte(plat) {
   const carte = document.createElement("article");
   carte.className = "card";
   carte.innerHTML = `
-    <img src="images/plats/${plat.image}" alt="${plat.nom}">
+    <img src="${plat.image.startsWith("/") ? plat.image : "images/plats/" + plat.image}">
     <div>
       <h3>${plat.nom}</h3>
       <p>${plat.description}</p>
@@ -37,7 +37,7 @@ async function chargerMenu() {
   } catch (erreur) {
     console.error(erreur);
     grille.innerHTML =
-      '<p class="message">Impossible de charger la carte. Ouvre le site avec Live Server (et non en double-cliquant sur le fichier).</p>';
+      '<p class="message">La carte est momentanément indisponible. Réessayez dans un instant..</p>';
   }
 }
 
