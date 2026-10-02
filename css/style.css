@@ -91,7 +91,7 @@ a {
     color: var(--blanc);
     background:
         linear-gradient(90deg, rgba(120, 8, 24, .92), rgba(120, 8, 24, .35)),
-        url("../images/plats/image1.jpg") center/cover;
+       var(--hero-image, url("../images/plats/image1.jpg")) center/cover;
 }
 
 .hero h1 {

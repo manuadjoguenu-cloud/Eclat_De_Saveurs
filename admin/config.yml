@@ -2,7 +2,7 @@
 
 backend:
   name: github
-  repo: manuadjoguenu-cloud/Eclat_De_Saveurs   
+  repo: manuadjoguenu-cloud/Eclat_De_Saveurs
   branch: main
 
 locale: fr
@@ -12,6 +12,8 @@ media_folder: "images/plats"
 public_folder: "/images/plats"
 
 collections:
+
+  # ---------- La carte ----------
   - name: carte
     label: Carte du restaurant
     files:
@@ -28,6 +30,84 @@ collections:
               - { label: Nom, name: nom, widget: string }
               - { label: Description, name: description, widget: string }
               - { label: Prix (FCFA), name: prix, widget: number, value_type: int, min: 0 }
-              - { label: Catégorie, name: categorie, widget: select, options: ["entrée", "plat", "dessert", "boisson"] }
+              - { label: Catégorie, name: categorie, widget: select, options: ["entrée", "plat", "Fast-food", "dessert", "boisson"] }
               - { label: Photo, name: image, widget: image }
               - { label: Afficher sur l'accueil, name: signature, widget: boolean, default: false }
+
+  # ---------- Le reste du site ----------
+  - name: site
+    label: Contenu du site
+    files:
+      - name: site
+        label: Textes, horaires et réglages
+        file: data/site.json
+        fields:
+
+          - label: Page d'accueil
+            name: accueil
+            widget: object
+            collapsed: true
+            fields:
+              - { label: Titre principal, name: titre, widget: string }
+              - { label: Phrase sous le titre, name: sous_titre, widget: string }
+              - { label: Photo du haut de page, name: image, widget: image }
+              - { label: Slogan (bas de page), name: slogan, widget: string }
+
+          - label: Notre histoire
+            name: histoire
+            widget: object
+            collapsed: true
+            fields:
+              - { label: Photo, name: image, widget: image }
+              - { label: Texte (laisser une ligne vide entre deux paragraphes), name: texte, widget: text }
+
+          - label: Coordonnées
+            name: contact
+            widget: object
+            collapsed: true
+            fields:
+              - { label: Adresse affichée, name: adresse, widget: string }
+              - { label: Lien Google Maps, name: lien_maps, widget: string, required: false }
+              - { label: Téléphone affiché, name: telephone, widget: string, hint: "Exemple : +228 92 03 66 39" }
+              - { label: Numéro WhatsApp, name: whatsapp, widget: string, hint: "Indicatif + numéro, sans + ni espaces. Exemple : 22892036639. Reçoit les commandes et réservations." }
+              - { label: Facebook (adresse complète), name: facebook, widget: string, required: false }
+              - { label: Instagram (adresse complète), name: instagram, widget: string, required: false }
+              - { label: TikTok (adresse complète), name: tiktok, widget: string, required: false }
+
+          - label: Horaires
+            name: horaires
+            widget: object
+            collapsed: true
+            fields:
+              - { label: Jours d'ouverture, name: jours, widget: string, hint: "Exemple : Mardi au dimanche" }
+              - { label: Service du midi, name: midi, widget: string, hint: "Exemple : 12h – 15h" }
+              - { label: Service du soir, name: soir, widget: string, hint: "Exemple : 19h – 21h30" }
+              - label: Jour de fermeture
+                name: jour_ferme
+                widget: select
+                default: 1
+                options:
+                  - { label: Aucun, value: -1 }
+                  - { label: Lundi, value: 1 }
+                  - { label: Mardi, value: 2 }
+                  - { label: Mercredi, value: 3 }
+                  - { label: Jeudi, value: 4 }
+                  - { label: Vendredi, value: 5 }
+                  - { label: Samedi, value: 6 }
+                  - { label: Dimanche, value: 0 }
+
+          - label: Réservation de table
+            name: reservation
+            widget: object
+            collapsed: true
+            fields:
+              - label: Heures proposées
+                name: creneaux
+                widget: list
+                label_singular: une heure
+                field: { label: Heure, name: heure, widget: string, pattern: ["^\\d{2}:\\d{2}$", "Format HH:MM, par exemple 12:30"] }
+                hint: "Le dernier créneau doit être avant la fermeture."
+              - { label: Délai minimum avant la réservation (minutes), name: delai_minimum, widget: number, value_type: int, min: 0, default: 60 }
+              - { label: Nombre maximum de personnes dans la liste, name: personnes_max, widget: number, value_type: int, min: 1, default: 8 }
+
+          - { label: Moyens de paiement, name: paiements, widget: string, hint: "Exemple : espèces, Flooz, T-Money" }

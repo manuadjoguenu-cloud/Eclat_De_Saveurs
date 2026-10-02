@@ -1,0 +1,44 @@
+{
+  "accueil": {
+    "titre": "Une cuisine africaine, revisitée avec éclat",
+    "sous_titre": "Produits de saison, dressages soignés et saveurs qui marquent.",
+    "image": "/images/plats/image1.jpg",
+    "slogan": "Les saveurs d'Afrique, servies avec éclat."
+  },
+  "histoire": {
+    "image": "/images/plats/image13.jpg",
+    "texte": "Né d'une envie simple : faire briller la cuisine que l'on mange à la maison, et la servir avec le soin d'une grande table.\n\nChez nous, l'ayimolou fumant, l'akumè accompagné de sa sauce, l'attiéké et le fufu retrouvent la place qu'ils méritent. Ce sont des plats de partage, de famille et de fête, préparés comme on les prépare chez soi : lentement, avec des produits frais et beaucoup de générosité.\n\nParce qu'on ne mange pas la même chose tous les jours, notre carte fait aussi la part belle aux envies d'ailleurs. Nos pizzas et nos burgers sont préparés maison, avec le même souci du détail que nos plats traditionnels.\n\nLa salle est pensée comme une grande cour de maison : chaleureuse, conviviale, faite pour les déjeuners entre collègues comme pour les grandes tablées du dimanche.\n\nNotre promesse : vous servir comme on sert un invité de la famille."
+  },
+  "contact": {
+    "adresse": "Togo, Lomé-Adidogome",
+    "lien_maps": "https://www.google.com/maps",
+    "telephone": "+228 92 03 66 39",
+    "whatsapp": "22892036639",
+    "facebook": "",
+    "instagram": "",
+    "tiktok": ""
+  },
+  "horaires": {
+    "jours": "Mardi au dimanche",
+    "midi": "12h – 15h",
+    "soir": "19h – 21h30",
+    "jour_ferme": 1
+  },
+  "reservation": {
+    "creneaux": [
+      "12:00",
+      "12:30",
+      "13:00",
+      "13:30",
+      "14:00",
+      "19:00",
+      "19:30",
+      "20:00",
+      "20:30",
+      "21:00"
+    ],
+    "delai_minimum": 60,
+    "personnes_max": 8
+  },
+  "paiements": "espèces, Flooz, T-Money"
+}

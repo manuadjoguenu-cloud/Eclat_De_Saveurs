@@ -24,10 +24,10 @@
     <a href="#reservation" class="btn">Réserver</a>
   </nav>
 
-  <section class="hero">
+  <section class="hero" id="hero">
     <div>
-      <h1>Une cuisine africaine, revisitée avec éclat</h1>
-      <p>Produits de saison, dressages soignés et saveurs qui marquent.</p>
+      <h1 id="hero-titre">Une cuisine africaine, revisitée avec éclat</h1>
+      <p id="hero-soustitre">Produits de saison, dressages soignés et saveurs qui marquent.</p>
       <a href="#carte" class="btn">Voir la carte</a>
     </div>
   </section>
@@ -91,7 +91,7 @@
 
   <section id="reservation" class="reservation">
     <h2>Réserver une table</h2>
-    <p class="sub">Ouvert du mardi au dimanche</p>
+    <p class="sub" id="resa-sub">Ouvert du mardi au dimanche</p>
     <form id="form-resa" novalidate>
       <div class="champ">
         <label for="nom">Nom complet</label>
@@ -150,14 +150,16 @@
 
   
   <section id="histoire" class="about">
-    <img src="images/plats/image13.jpg" alt="Un plat de L'Éclat de Saveurs">
+    <img id="histoire-img" src="images/plats/image13.jpg" alt="Un plat de L'Éclat de Saveurs">
     <div>
       <h2>L'Éclat de Saveurs</h2>
+      <div id="histoire-texte">
 <p>Né d'une envie simple : faire briller la cuisine que l'on mange à la maison, et la servir avec le soin d'une grande table.</p>
 <p>Chez nous, l'ayimolou fumant, l'akumè accompagné de sa sauce, l'attiéké et le fufu retrouvent la place qu'ils méritent. Ce sont des plats de partage, de famille et de fête, préparés comme on les prépare chez soi : lentement, avec des produits frais et beaucoup de générosité.</p>
 <p>Parce qu'on ne mange pas la même chose tous les jours, notre carte fait aussi la part belle aux envies d'ailleurs. Nos pizzas et nos burgers sont préparés maison, avec le même souci du détail que nos plats traditionnels.</p>
 <p>La salle est pensée comme une grande cour de maison : chaleureuse, conviviale, faite pour les déjeuners entre collègues comme pour les grandes tablées du dimanche.</p>
 <p>Notre promesse : vous servir comme on sert un invité de la famille.</p>
+</div>
       <a href="#reservation" class="btn">Réserver une table</a>
     </div>
   </section>
@@ -166,21 +168,21 @@
     <div class="footer-grille">
       <div>
         <p class="footer-nom">L'Éclat de Saveurs</p>
-        <p>Les saveurs d'Afrique, servies avec éclat.</p>
+        <p id="footer-slogan">Les saveurs d'Afrique, servies avec éclat.</p>
       </div>
  
       <div>
         <h4>Nous trouver</h4>
         <ul>
-          <li><a href="https://www.google.com/maps" target="_blank" rel="noopener">Togo, Lomé-Adidogome</a></li>
-          <li><a href="tel:+22892036639">+228 92 03 66 39</a></li>
+          <li><a id="footer-adresse" href="https://www.google.com/maps" target="_blank" rel="noopener">Togo, Lomé-Adidogome</a></li>
+          <li><a id="footer-tel" href="tel:+22892036639">+228 92 03 66 39</a></li>
         </ul>
-        <a href="https://wa.me/22892036639" target="_blank" rel="noopener" class="footer-wa">Écrire sur WhatsApp</a>
+        <a href="https://wa.me/22892036639" target="_blank" rel="noopener" class="footer-wa" id="footer-wa">Écrire sur WhatsApp</a>
       </div>
  
       <div>
         <h4>Horaires</h4>
-        <ul>
+        <ul id="footer-horaires">
           <li>Mardi au dimanche</li>
           <li>12h – 15h</li>
           <li>19h – 21h30</li>
@@ -198,19 +200,21 @@
         </ul>
         <h4 class="titre-suivant">Suivez-nous</h4>
         <ul>
-          <li><a href="https://www.facebook.com/#" target="_blank" rel="noopener">Facebook</a></li>
-          <li><a href="https://www.instagram.com/#" target="_blank" rel="noopener">Instagram</a></li>
-          <li><a href="https://www.tiktok.com/#" target="_blank" rel="noopener">TikTok</a></li>
+          <li><a id="footer-facebook" href="https://www.facebook.com/#" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a id="footer-instagram" href="https://www.instagram.com/#" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a id="footer-tiktok" href="https://www.tiktok.com/#" target="_blank" rel="noopener">TikTok</a></li>
         </ul>
       </div>
     </div>
  
     <div class="footer-bas">
-      <span>© <span id="annee">2026</span> L'Éclat de Saveurs · Paiement : espèces, Flooz, T-Money</span>
+      <span>© <span id="annee">2026</span> L'Éclat de Saveurs · Paiement : <span id="footer-paiements">espèces, Flooz, T-Money</span>
+      </span>
+
       <a href="#">Haut de page ↑</a>
     </div>
   </footer>
-
+  <script src="js/site.js"></script>
   <script src="js/main.js"></script>
   <script src="js/reservation.js"></script>
   <script src="js/commande.js"></script>
