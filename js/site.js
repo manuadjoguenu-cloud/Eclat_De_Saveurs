@@ -25,13 +25,20 @@ function ecrire(id, valeur) {
   if (element && valeur) element.textContent = valeur;
 }
 
-// Règle l'adresse d'un lien ; sans adresse, le lien (et sa ligne de liste) est caché.
+// N'accepte que les adresses http(s) : refuse par exemple « javascript: ».
+function urlSure(valeur) {
+  const adresse = String(valeur || "").trim();
+  return /^https?:\/\//i.test(adresse) ? adresse : "";
+}
+
+// Règle l'adresse d'un lien ; sans adresse valide, le lien (et sa ligne de liste) est caché.
 function regler(id, href) {
   const lien = document.getElementById(id);
   if (!lien) return;
+  const adresse = urlSure(href);
   const conteneur = lien.closest("li") || lien;
-  conteneur.hidden = !href;
-  if (href) lien.href = href;
+  conteneur.hidden = !adresse;
+  if (adresse) lien.href = adresse;
 }
 
 chargerSite.then((site) => {
@@ -75,7 +82,8 @@ chargerSite.then((site) => {
 
     const adresse = document.getElementById("footer-adresse");
     if (contact.adresse) adresse.textContent = contact.adresse;
-    if (contact.lien_maps) adresse.href = contact.lien_maps;
+    const maps = urlSure(contact.lien_maps);
+    if (maps) adresse.href = maps;
     else adresse.removeAttribute("href");
 
     if (contact.telephone) {
@@ -92,6 +100,11 @@ chargerSite.then((site) => {
     regler("footer-facebook", contact.facebook);
     regler("footer-instagram", contact.instagram);
     regler("footer-tiktok", contact.tiktok);
+
+    // Sans aucun réseau renseigné, on cache aussi le titre « Suivez-nous »
+    const aucun = !urlSure(contact.facebook) && !urlSure(contact.instagram) && !urlSure(contact.tiktok);
+    const suivez = document.getElementById("footer-suivez");
+    if (suivez) suivez.hidden = aucun;
   }
 
 

@@ -392,6 +392,36 @@ footer a:hover {
     cursor: pointer;
 }
 
+/* Footer : icônes des réseaux sociaux */
+.reseaux {
+    display: flex;
+    gap: 12px;
+}
+
+.reseau {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(255, 255, 255, .45);
+    border-radius: 50%;
+    color: var(--blanc);
+    transition: background .2s, color .2s;
+}
+
+.reseau svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+.reseau:hover {
+    background: var(--blanc);
+    color: var(--rouge);
+    text-decoration: none;
+}
+
 /* Tablette et mobile */
 @media (max-width: 900px) {
     .navbar {
