@@ -43,7 +43,7 @@
     {
       "nom": "Foufou",
       "description": "Viande de boeuf,Poisson, sauce blanche, d'arachide et sauce aux grains de palme ",
-      "prix": 2500,
+      "prix": 1500,
       "categorie": "plat",
       "image": "image6.jpg",
       "signature": true
